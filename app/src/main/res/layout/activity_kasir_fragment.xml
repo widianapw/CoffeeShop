@@ -4,6 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/overlay_dark_80"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".features.kasir.KasirFragment">
@@ -37,44 +38,56 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginTop="15dp"
-            android:backgroundTint="@color/cardview_light_background"
-            app:cardCornerRadius="15dp">
+            android:backgroundTint="@color/cardview_light_background">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp"
+                    android:padding="2dp"
                     android:id="@+id/labelJumlah"
+                    android:textColor="@color/overlay_dark_80"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-black"
                     android:text="Jumlah Item (QTY) : "
-                    android:textSize="7pt"></TextView>
+                    android:textSize="7pt"
+                    android:textStyle="bold"></TextView>
 
                 <TextView
+                    android:layout_marginTop="5dp"
                     android:id="@+id/qty"
+                    android:padding="2dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/labelJumlah"
-                    android:fontFamily="sans-serif-black"
+                    android:textStyle="bold"
+                    android:textColor="@color/overlay_dark_80"
                     android:text="2"
                     android:textSize="7pt"></TextView>
 
                 <TextView
+                    android:layout_marginStart="5dp"
+                    android:padding="2dp"
                     android:id="@+id/labelHarga"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/labelJumlah"
-                    android:fontFamily="sans-serif-black"
+                    android:textStyle="bold"
+                    android:textColor="@color/overlay_dark_80"
                     android:text="Total Harga : "
                     android:textSize="7pt"></TextView>
 
                 <TextView
+                    android:padding="2dp"
                     android:id="@+id/total_harga"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/qty"
+                    android:textStyle="bold"
+                    android:textColor="@color/overlay_dark_80"
                     android:layout_marginBottom="15dp"
                     android:layout_toRightOf="@id/labelHarga"
                     android:fontFamily="sans-serif-black"
@@ -94,14 +107,34 @@
 <!--                    android:textSize="9dp"></Button>-->
 
                 <Button
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="2dp"
                     android:id="@+id/button_detail_item"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/total_harga"
                     android:layout_alignParentLeft="true"
-                    android:backgroundTint="@color/register"
-                    android:fontFamily="sans-serif-black"
+                    android:background="@drawable/btn_rounded_green_300"
+                    android:backgroundTint="@color/overlay_dark_80"
+                    android:textStyle="bold"
                     android:text="Detail Item"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="9dp"></Button>
+
+                <Button
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_alignParentRight="true"
+                    android:padding="2dp"
+                    android:id="@+id/button_cetak_resi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/total_harga"
+                    android:background="@drawable/btn_rounded_green_300"
+                    android:backgroundTint="@color/overlay_dark_80"
+                    android:textStyle="bold"
+                    android:text="Cetak Resi"
                     android:textColor="@color/cardview_light_background"
                     android:textSize="9dp"></Button>
             </RelativeLayout>
